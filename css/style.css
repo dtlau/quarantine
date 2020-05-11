@@ -1,0 +1,470 @@
+/* style CSS */
+
+* {
+    box-sizing: border-box; /* because it’s 2019, jen simmons */
+    padding: 0;
+    margin: 0;
+}
+html {
+    color:#3D4A41;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: "freight-big-pro";
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+body {
+    background: #F4EDE0;
+    margin:0;
+    }
+    
+    img {
+    display: block;
+    width: 100%;
+    }
+
+
+/* start of main hierarchy styling */
+h1{
+    font-family:"freight-big-pro";
+    font-size: 60px;
+    line-height: 3rem;
+}
+
+h2{
+    font-family:"freight-big-pro";
+    font-size: 27px;
+}
+
+h3{
+    font-family: "freight-big-pro";
+    font-size: 20px;
+}
+
+h4{
+    font-family: "freight-big-pro";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+h5{
+    font-family:"freight-sans-pro";
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+p{
+    font-family: "freight-sans-pro";
+    font-size: 15px;
+}
+/* end of main hierarchy styling */
+
+
+
+/* START HERO */
+
+.hero{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
+    padding: 5rem 3rem;
+}
+
+.inner-hero{
+    background: rgb(244, 237, 224);
+    padding: 3rem;
+    border-radius: 0.5rem;
+}
+
+.inner-hero{
+    font-size: 5rem;
+    text-align:left;
+    line-height: 1rem;
+}
+
+.inner-hero h1{
+    text-transform: uppercase;
+    font-size: 60px;
+    padding-bottom:30px;
+    line-height: 0.8em;
+}
+
+.inner-hero h4{
+    line-height: 1rem;
+    padding-bottom:25px;
+}
+
+.inner-hero{
+    grid-column:2;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+.button{
+    text-decoration: none;
+    color: #3D4A41;
+}
+
+.button:hover{
+    color: #714D00;
+}
+
+@media (min-width: 600px) {
+    .inner-hero {
+      grid-column-start: 3;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .inner-hero {
+      grid-column-start: 1;
+    }
+  }
+
+/*end of hero work*/
+
+
+/* start of nav work */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.logo a{
+    color: #3D4A41;
+}
+
+.logo{
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size: 50px;
+}
+
+.logo,.main-nav {
+    list-style: none;
+    text-transform: uppercase;
+    line-height: 0.8em;
+}
+
+.logo a, .main-nav a{
+    text-decoration: none;
+    letter-spacing: 0.45rem;
+}
+
+.logo a:hover{
+    color:#714D00;
+}
+
+.main-nav{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+}
+
+.main-nav a{
+    display: block;
+    padding: 1em;
+    color: #3D4A41;
+}
+
+.main-nav a:hover{
+    background: #F4EDE0;
+}
+
+.main-nav a{
+    text-align: center;
+    padding: 10px;
+}
+
+.hobbies, .kitchen{
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+@media only screen and (min-width:35em){
+    .main-nav{
+        flex-direction:row;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width:60em){
+    .logo{
+        margin-left: 50px;
+    }
+    .flex-container{
+        flex-direction: row;
+    }
+    .main-nav{
+        justify-content: flex-end;
+        padding: 30px;
+    }
+    .main-nav a{
+        padding: 20px;
+    }
+}
+/* end of nav work */
+
+
+
+/*  start section class hobbies cards */
+
+.card {
+    display:flex;
+    flex-direction: column;
+    min-width: 250px;
+    max-width: 325px;
+    border-radius: 0.5rem;
+    border:none;
+    box-shadow: 0 2px 5px rgba(61, 74, 65, 0.534);
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* flex card */
+.card {
+    background-color:#E3E6DC;
+    position: relative;
+    top: 65px;
+    margin: 10px;
+}
+
+.card:hover{
+    transition: all.1s ease-in;
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(61, 74, 65, 0.534);
+}
+
+.cardphoto {
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.cardarticle {
+    padding: 3rem;
+    flex-grow: 1;
+}
+/* typography */
+
+.cardH1{
+    font-size: 2rem;
+    margin:0;
+    color: #3D4A41;
+}
+.card p {
+    font-size: 1rem;
+    line-height: 1.3;
+    padding-bottom: 20px;
+}
+
+
+.card h5:hover{
+    color: #714D00;
+}
+
+
+
+
+/* media queries */
+
+.cards {
+    display: grid;
+    grid-gap: 1em;
+    margin: 0 auto;
+    max-width: 1100px;
+    justify-content: center;
+}
+
+@media (min-width:800px){
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/*  end section class hobbies cards */
+
+
+/* start kitchen intro content */
+
+.intro{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.intro h1{
+    padding-bottom: 10px;
+}
+
+.intro h4 {
+    font-size: 18px;
+}
+
+.intro h4 a{
+    text-decoration: none;
+    color: #3D4A41;
+}
+
+.intro h4 a:hover{
+    color: #714D00;
+}
+
+/* end kitchen intro content */
+
+/* start kitchen content columns */
+
+.kitchen-columns{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.recipe1 p, .recipe2 p {
+    padding-bottom: 15px;
+}
+
+.recipe1 h5, .recipe2 h5{
+    padding-bottom: 50px;
+}
+
+.recipe1 h5 a, .recipe2 h5 a{
+    text-decoration: none;
+    color: #3D4A41;
+}
+
+.recipe1 h5 a:hover, .recipe2 h5 a:hover{
+    color: #714D00;
+}
+
+article {
+    padding:1rem;
+}
+
+.kitchen-columns{
+    display: grid;
+    grid-gap:1em;
+    max-width: 1100px;
+}
+
+
+/*media queries*/
+
+@media screen and (max-width: 600px) { 
+    .prep1a, .prep1b, .prep2a, .prep2b{
+        display:none;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:1200px){
+
+    .prep1a, .prep1b, .prep2a, .prep2b{
+        display:none;
+    }
+
+    .kitchen-columns{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .finalimage1{
+        grid-column-start:1;
+        grid-row-start:1;
+    }
+    .recipe1{
+        grid-column-start:1;
+        grid-row-start:2;
+    }
+    .finalimage2{
+        grid-column-start:2;
+        grid-row-start:1;
+    }
+    .recipe2{
+        grid-column-start:2;
+        grid-row-start:2;
+    }
+
+}
+
+@media (min-width: 1200px){
+    .kitchen-columns{
+        margin-right:auto;
+        margin-left:auto;
+        padding-bottom:100px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    img{
+        width: 500px;
+        height:500px;
+        object-fit: cover;
+    }
+
+    .prep1a{
+        grid-column-start:1;
+        grid-row-start:1;
+    }
+    .prep1b{
+        grid-column-start:2;
+        grid-row-start:1;
+    }
+    .finalimage1{
+        grid-column-start:1;
+        grid-row-start:2;
+    }
+    .recipe1{
+        grid-column-start:2;
+        grid-row-start:2;
+    }
+    .prep2a{
+        grid-column-start:1;
+        grid-row-start:4;
+    }
+    .prep2b{
+        grid-column-start:2;
+        grid-row-start:3;
+    }
+    .finalimage2{
+        grid-column-start:2;
+        grid-row-start:4;
+    }
+    .recipe2{
+        grid-column-start:1;
+        grid-row-start:3;
+    }
+    
+    .kitchen-intro h1{
+        font-size: 100px;
+        padding-bottom: 20px;
+        padding-top:100px;
+    }
+
+    .kitchen-intro h4{
+        padding-bottom: 50px;
+    }
+
+    h2{
+        text-transform: lowercase;
+        font-size: 80px;
+        line-height:0.75em;
+        padding-bottom:30px;
+    }
+}
+
+
+/* end kitchen content columns */
