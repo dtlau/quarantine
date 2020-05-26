@@ -89,7 +89,7 @@ p{
 
 .inner-hero h1{
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 50px;
     padding-bottom:30px;
     line-height: 0.8em;
 }
@@ -190,7 +190,7 @@ button{
     padding: 10px;
 }
 
-.hobbies, .kitchen{
+.hobbies, .kitchen, .photos{
     font-style: italic;
     text-transform: lowercase;
 }
@@ -243,13 +243,13 @@ button{
 .card {
     background-color:#E3E6DC;
     position: relative;
-    top: 65px;
+    top: 20px;
     margin: 10px;
 }
 
 .card:hover{
     transition: all.1s ease-in;
-    top: -2px;
+    top: 1px;
     box-shadow: 0 4px 5px rgba(61, 74, 65, 0.534);
 }
 
@@ -468,3 +468,26 @@ article {
 
 
 /* end kitchen content columns */
+
+
+/* start of photo page*/
+
+.photo-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    grid-auto-rows: 240px;
+}
+
+@media screen and (min-width:600px){
+    .photo-grid{
+        grid-auto-flow:dense;
+    }
+}
+/* end of photo page*/
