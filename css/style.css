@@ -530,14 +530,17 @@ article {
 
   
   .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     max-width: 90ch;
-    height: 35vh;
+    height: 40vh;
     padding: 2rem;
+    
   }
   
   .content article {
-    padding-top: 50px;
     max-width: 650px;
     margin: 0 auto;
     line-height: 1.3;
